@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/4e631e6167.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="testimonial">
+        <div class="testimonial-text">
+         
+          <div class="user-text">
+            <i class="fas fa-quote-left"></i>
+            <p>Gave read use way make spot how nor. In daughter goodness an likewise oh consider at procured wandered. Songs words wrong by me hills heard timed. Happy eat may doors songs. </p>
+            <span>JOHN RAYAN, CEO HUMBLE</span>
+          </div>
+          <div class="user-text active-text">
+            <i class="fas fa-quote-left"></i>
+            <p>Allow miles wound place the leave had. To sitting subject no improve studied limited. Ye indulgence unreserved connection alteration appearance my an astonished. </p>
+            <span>TEst2, CEO HUMBLE</span>
+          </div>
+          <div class="user-text">
+            <i class="fas fa-quote-left"></i>
+            <p>Him boisterous invitation dispatched had connection inhabiting projection. By mutual an mr danger garret edward an. Diverted as strictly exertion addition no disposal by stanhill.</p>
+            <span>Tets3, CEO HUMBLE</span>
+          </div>
+          <div class="user-text">
+            <i class="fas fa-quote-left"></i>
+            <p>Him boisterous invitation dispatched had connection inhabiting projection. By mutual an mr danger garret edward an. Diverted as strictly exertion addition no disposal by stanhill. </p>
+            <span>Test4, CEO HUMBLE</span>
+          </div>
+          <div class="user-text">
+            <i class="fas fa-quote-left"></i>
+            <p>Him boisterous invitation dispatched had connection inhabiting projection. By mutual an mr danger garret edward an. Diverted as strictly exertion addition no disposal by stanhill. </p>
+            <span>Test5, CEO HUMBLE</span>
+          </div>
+
+        </div>    
+
+        <div class="testimonial-pic">
+          <img src="./image/user1.png" class="user-pic" alt="" onclick="showReview()">
+          <img src="./image/user2.png" class="user-pic active-pic" alt="" onclick="showReview()">
+          <img src="./image/user3.png" class="user-pic" alt="" onclick="showReview()">
+          <img src="./image/user4.png" class="user-pic" alt="" onclick="showReview()">
+          <img src="./image/user5.png" class="user-pic" alt="" onclick="showReview()">
+        </div>  
+
+    </div>
+  </div>
+
+  <script>
+    let userTexts = document.getElementsByClassName('user-text');
+    let userPics = document.getElementsByClassName('user-pic');
+
+    function showReview(){
+      for(userPic of userPics){
+        userPic.classList.remove("active-pic");
+
+      }
+      for(userText of userTexts){
+        userText.classList.remove("active-text")
+      }
+      let i = Array.from(userPics).indexOf(event.target);
+
+      userPics[i].classList.add("active-pic");
+      userTexts[i].classList.add('active-text');
+    }
+
+
+  </script>
+
+  
+
+
+</body>
+</html>
